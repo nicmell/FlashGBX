@@ -5,13 +5,13 @@
 
 
 rm -Rf dist
+rm -Rf build
 rm FlashGBX.spec
 
 pyinstaller \
     --name "FlashGBX" \
     --icon "FlashGBX/res/icon.icns" \
     --add-data "FlashGBX/res/*:res/" \
-    --codesign-identity "nick" \
     --noconfirm \
     --windowed \
     app.py

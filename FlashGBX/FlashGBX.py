@@ -91,7 +91,7 @@ def main(portableMode=False):
 	print("https://github.com/lesserkuma/FlashGBX")
 	
 	if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
-		app_path = os.path.dirname(sys.executable)
+		app_path = os.path.dirname(os.path.dirname(sys.executable)) + "/Resources"
 	else:
 		app_path = os.path.dirname(os.path.abspath(__file__))
 	
